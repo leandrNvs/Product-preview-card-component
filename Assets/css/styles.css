@@ -1,0 +1,144 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+:root {
+  --title-font-size: 3rem;
+  --subtitle-font-size: 1.4rem;
+  --normal-font-size: 1.4rem;
+
+  --ff-montserrat: 'Montserrat', sans-serif;
+  --ff-fraunces: 'Fraunces', serif;
+
+  --normal-font-weight: 500;
+  --bold-font-weight: 700;
+
+  --cream: hsl(30, 38%, 92%);
+  --dark-cyan: hsl(158, 36%, 37%);
+  --very-dark-blue: hsl(212, 21%, 14%);
+  --dark-grayish-blue: hsl(228, 12%, 48%);
+  --white: hsl(0, 0%, 100%);
+}
+
+body {
+  background-color: bisque;
+  padding: 0 1.5rem;
+}
+
+.card {
+  margin: 3rem auto;
+  background-color: var(--white);
+  border-radius: .8rem;
+  overflow: hidden;
+  max-width: 600px;
+}
+
+.card__body {
+  margin: 2.5rem;
+}
+
+.card__title {
+  font-size: var(--title-font-size);
+  font-family: var(--ff-fraunces);
+  margin: 1.2rem 0;
+  line-height: 1.1;
+}
+
+.card__subtitle {
+  font-size: var(--subtitle-font-size);
+  font-family: var(--ff-montserrat);
+  font-weight: var(--normal-font-weight);
+  text-transform: uppercase;
+  letter-spacing: .5rem;
+  color: var(--dark-grayish-blue);
+}
+
+.card__description {
+  font-size: var(--normal-font-size);
+  font-family: var(--ff-montserrat);
+  font-weight: var(--normal-font-weight);
+  color: var(--dark-grayish-blue);
+  line-height: 1.6;
+}
+
+.card__prices {
+  margin: 1rem 0;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.card__prices span:first-child {
+  font-size: var(--title-font-size);
+  font-weight: var(--bold-font-weight);
+  font-family: var(--ff-fraunces);
+  color: var(--dark-cyan);
+}
+
+.card__prices span:last-child {
+  text-decoration: line-through;
+  font-size: var(--normal-font-size);
+  color: var(--dark-grayish-blue);
+  font-family: var(--ff-montserrat);
+}
+
+.card__button {
+  margin-top: 2rem;
+}
+
+.card__button button {
+  border: 0;
+  background-color: var(--dark-cyan);
+  color: var(--white);
+  font-size: 1.6rem;
+  width: 100%;
+  padding: 1.3rem 0;
+  font-family: var(--ff-montserrat);
+  border-radius: .8rem;
+  cursor: pointer;
+  transition: .4s;
+}
+
+.card__button button:hover {
+  background-color: var(--very-dark-blue);
+}
+
+@media  screen and (min-width: 600px) {
+  .card {
+    display: flex;
+    align-items: center;
+  } 
+
+  .card__image {
+    flex-basis: 50%;
+  }
+  
+  .card__body {
+    flex: 1;
+  }
+
+  .card__title {
+    margin: 1.9rem 0;
+  }
+
+  .card__description {
+    margin: 1.9rem 0;
+  }
+}
+
+.attribution {
+  font-size: 1.7rem;
+  text-align: center;
+  padding: 1rem 0;
+}
